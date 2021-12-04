@@ -11,9 +11,9 @@ app = dash.Dash(__name__)
 
 df = pd.read_csv("student-mat.csv")
 
-# df = df.groupby(["type","title","director","cast","country","rating","duration","listed_in"])[['release_year']].mean()
-# df.reset_index(inplace=True)
-# print(df)
+df = df.groupby(["sex","age","Mjob","Fjob","reason","guardian","Fedu","traveltime","Medu","internet"])[['school']].mean()
+df.reset_index(inplace=True)
+
 
 
 app.layout = html.Div([
